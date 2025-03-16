@@ -5,7 +5,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - "/home/tu_usuario/apps/postgres:/var/lib/postgresql/data"
+      - "~apps/postgres:/var/lib/postgresql/data"
     environment:
        POSTGRES_PASSWORD: "1234"
        POSTGRES_USER: "Facu"
