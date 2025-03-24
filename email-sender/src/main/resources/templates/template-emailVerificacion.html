@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de correo electrónico</title>
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            margin-top: 40px;
+            padding: 0;
+            background-color: #f6f6f6;
+            font-family: Arial, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        .container {
+            width: 100%;
+            padding: 20px 0;
+            background-color: #f6f6f6;
+        }
+        .content {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+        .body {
+            padding: 20px;
+            color: #333333;
+        }
+        .body h1 {
+            font-size: 24px;
+        }
+        .body p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px 0;
+            text-align: center;
+            background-color: #4CAF50;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .footer {
+            background-color: #333333;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        /* Estilos responsivos */
+        @media (max-width: 600px) {
+            .content {
+                width: 100%;
+                border-radius: 0;
+            }
+            .header, .body, .footer {
+                padding: 15px;
+            }
+            .body h1 {
+                font-size: 20px;
+            }
+            .body p {
+                font-size: 14px;
+            }
+            .button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<table class="container" width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td>
+            <table class="content" width="100%" cellpadding="0" cellspacing="0">
+
+                <!-- Cuerpo del correo -->
+                <tr>
+                    <td class="body">
+                        <h1>Verifica tu dirección de correo electrónico</h1>
+                        <p>Hola <span th:text="${nombre}">Usuario</span>!</p>
+                        <p>Estás a un paso de comenzar. Por favor, haz clic en el botón de abajo para verificar tu dirección de correo electrónico y disfrutar de nuestros servicios exclusivos.</p>
+                        <a th:href="${enlaceVerificacion}" class="button">VERIFICAR MI CORREO</a>
+                        <p>Gracias,<br>El equipo de la Empresa</p>
+                    </td>
+                </tr>
+                <!-- Pie de página -->
+                <tr>
+                    <td class="footer">
+                        <p>Contacto: +11 111 333 4444 | info@sur.com</p>
+                        <p>Síguenos en:
+                            <a href="https://facebook.com/tuempresa">Facebook</a> |
+                            <a href="https://linkedin.com/tuempresa">LinkedIn</a> |
+                            <a href="https://instagram.com/tuempresa">Instagram</a> |
+                            <a href="https://www.youtube.com/watch?v=ypERYod0lX0">YouTube</a>
+                        </p>
+                        <p>&copy; 2025 Sur. Todos los derechos reservados.</p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
