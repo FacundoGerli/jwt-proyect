@@ -8,4 +8,5 @@ public interface IAuthService {
     TokenResponse login(LoginRequest request);
     TokenResponse register(RegisterRequest request);
     TokenResponse refreshToken(String auth);
+    String verifyUser(String token);
 }

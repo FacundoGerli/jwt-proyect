@@ -21,6 +21,8 @@ public class JwtService {
     private long expiration;
     @Value("${spring.security.jwt.expiration.refresh-token}")
     private long expirationRefreshToken;
+    @Value("${spring.security.jwt.verifyExpiration}")
+    private long expirationVerificationToken;
 
     public String generateToken(final Usuario user){
         return buildToken(user,expiration);
@@ -28,6 +30,9 @@ public class JwtService {
 
     public String generateRefreshToken(Usuario user) {
         return buildToken(user,expirationRefreshToken);
+    }
+    public String generateVerifyToken(Usuario user){
+        return buildToken(user, expirationVerificationToken);
     }
 
     private String buildToken(final Usuario user, final long expiration) {

@@ -28,4 +28,8 @@ public class AuthController {
             @RequestHeader(HttpHeaders.AUTHORIZATION) final String auth){
         return authService.refreshToken(auth);
     }
+    @GetMapping("/verify/{token}")
+    public String verifyUser(@PathVariable String token){
+        return authService.verifyUser(token);
+    }
 }
